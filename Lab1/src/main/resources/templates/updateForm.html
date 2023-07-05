@@ -11,15 +11,18 @@
 <body>
     <div class="container">
         <h1 th:text="${message}"></h1>
-        <form action="#" method="post" th:action="@{updateAforisma}" th:object="${aforisma}">
-            <label for="idAforisma" class="form-label">Id</label>
-            <input th:field="*{id}" type="text" class="form-control" id="idAforisma">
+        <form action="#" method="post" th:action="@{updateRecensione}" th:object="${recensione}">
+            <label for="idRecensione" class="form-label">Id</label>
+            <input th:field="*{id}" type="text" class="form-control" id="idRecensione" style="background-color: darkgrey;" readonly>
+			
+			<label for="titoloRecensione" class="form-label">Titolo</label>
+            <input th:field="*{titolo}" type="text" class="form-control" id="titoloRecensione">
+            
+            <label for="testoRecensione" class="form-label">Testo</label>
+            <input th:field="*{testo}" type="text" class="form-control" id="testoRecensione">
 
-            <label for="testoAforisma" class="form-label">Testo</label>
-            <input th:field="*{testo}" type="text" class="form-control" id="testoAforisma">
-
-            <label for="autoreAforisma" class="form-label">Autore</label>
-            <input th:field="*{autore}" type="text" class="form-control" id="autoreAforisma">
+            <label for="autoreRecensione" class="form-label">Username</label>
+            <input th:field="*{username}" type="text" class="form-control" id="autoreRecensione">
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
