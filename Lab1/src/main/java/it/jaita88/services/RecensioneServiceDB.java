@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import it.jaita88.model.Recensione;
-
 import it.jaita88.repositories.RecensioneRepository;
 
+@Service
 public class RecensioneServiceDB implements RecensioneService {
 	
 	@Autowired 
