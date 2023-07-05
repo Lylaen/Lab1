@@ -25,23 +25,15 @@ public class RecensioneController {
 	@GetMapping("/all")
 	public String showAllRecensioni(Model model) {
 		String title = "Recensioni";
-		model.addAttribute("message", title);
-
-	
+		model.addAttribute("message", title);	
 		List<Recensione> recensioni = service.getRecensioni();
-		
-
 		model.addAttribute("recensioni", recensioni);
 		return "home";
 	}
 
 	@GetMapping("/{id}")
-	public String showOneRecensione(@PathVariable("id") Integer id, Model model) {
-
-		
-		Recensione recensione = service.getRecensioneById(id);
-		
-		
+	public String showOneRecensione(@PathVariable("id") Integer id, Model model) {		
+		Recensione recensione = service.getRecensioneById(id);		
 		List<Recensione> recensioni = new ArrayList<>();
 		recensioni.add(recensione);
 		String title = "Recensioni";
@@ -53,12 +45,8 @@ public class RecensioneController {
 	@GetMapping("/delete/{id}")
 	public String deleteRecensione(@PathVariable("id") Integer id, Model model) {
 		String title = "Recensioni";
-		model.addAttribute("message", title);
-
-		
-		boolean b = service.deleteRecensione(id);
-
-		
+		model.addAttribute("message", title);		
+		boolean b = service.deleteRecensione(id);		
 		List<Recensione> recensioni = service.getRecensioni();
 		model.addAttribute("recensioni", recensioni);
 		return "home";
