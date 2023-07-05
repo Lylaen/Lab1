@@ -13,7 +13,7 @@ public class Recensione {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id1")
+	@Column(name="id")
 	private Integer id;
 	@Column(name="titolo", nullable = false)
 	private String titolo;
